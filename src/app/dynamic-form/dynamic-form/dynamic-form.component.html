@@ -1,0 +1,18 @@
+<!-- Il nous faut créer un form avec le ngSubmit qui va bien et le formGroup aussi qui va bien
+Ensuite on doit utiliser un ngFor pour chaque model des models, et appeler dynamic elem sur eux.
+Finalement on doit faire le bouton Submit, de type submit
+-->
+
+<form (ngSubmit)="onSubmit()" [formGroup]="form">
+  <div *ngFor="let model of models">
+    <app-dynamic-element [model]="model" [form]="form"></app-dynamic-element>
+  </div>
+
+  <div>
+    <button type="submit" [disabled]="!form.valid">Save</button>
+  </div>
+</form>
+
+<div *ngIf="payLoad">
+  <strong>Saved the following values</strong><br />{{ payLoad }}
+</div>

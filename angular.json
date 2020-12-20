@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "demo-m33-angular"
+    }
+  },
+  "defaultProject": "demo-m33-angular",
+  "cli": {
+    "analytics": false
+  }
 }
